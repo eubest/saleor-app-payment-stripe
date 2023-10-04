@@ -81,6 +81,7 @@ const ChannelToConfigurationTableRow = ({
             })),
           ]}
           onChange={(e) => {
+            if (e){
             const newMapping = {
               channelId: channel.id,
               configurationId: e.value,
@@ -92,6 +93,7 @@ const ChannelToConfigurationTableRow = ({
               };
             });
             saveMapping(newMapping);
+            }
           }}
         />
       </Td>
